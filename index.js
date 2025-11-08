@@ -44,7 +44,7 @@ const Crypto = require('crypto')
 const path = require('path')
 const prefix = config.PREFIX
 
-const ownerNumber = ['254768116434']
+const ownerNumber = ['255612491554']
 
 const tempDir = path.join(os.tmpdir(), 'cache-temp')
 if (!fs.existsSync(tempDir)) {
@@ -123,23 +123,22 @@ async function connectToWA() {
           console.log('[ ✔ ] Plugins installed successfully ✅')
           console.log('[ 🪀 ] Bot connected to WhatsApp 📲')
 
-          let up = `*Hᴇʟʟᴏ ᴛʜᴇʀᴇ Brian xᴅ ᴄᴏɴɴᴇᴄᴛᴇᴅ! 👋🏻* 
+          let up = `*Hᴇʟʟᴏ ᴛʜᴇʀᴇ ꜱɪʟᴀ ᴍᴅ s2 ᴄᴏɴɴᴇᴄᴛᴇᴅ! 👋🏻* 
 
-*ᴋᴇᴇᴘ ᴏɴ ᴜsɪɴɢ BRIAN TECH SPACE ᴍᴏᴅs🚩* 
+*ᴋᴇᴇᴘ ᴏɴ ᴜsɪɴɢ ꜱɪʟᴀ ᴍᴅ ʙᴏᴛ☠* 
 
 > sᴜʙsᴄʀɪʙᴇ ʏᴛ ᴄʜᴀɴɴᴇʟ ғᴏʀ ᴛᴜᴛᴏʀɪᴀʟs
-https://www.youtube.com/@brian_tech_space
+https://www.youtube.com/@silatrix22
 
-- *ʏᴏᴜʀ ʙᴏᴛ ᴘʀᴇғɪx: ➡️[ . ]*
-> - ʏᴏᴜ ᴄᴀɴ ᴄʜᴀɴɢᴇ ᴜʀ ᴘʀᴇғɪx ᴜsɪɴɢ ᴛʜᴇ .ᴘʀᴇғɪx ᴄᴏᴍᴍᴀɴᴅ
+> *ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ ➡️*
+https://whatsapp.com/channel/0029VbBPxQTJUM2WCZLB6j28
 
-> ᴅᴏɴᴛ ғᴏʀɢᴇᴛ ᴛᴏ sʜᴀʀᴇ, sᴛᴀʀ & ғᴏʀᴋ ᴛʜᴇ ʀᴇᴘᴏ ⬇️ 
-https://github.com/briantechspace/Brian-XD
+> ᴅᴏɴᴛ ғᴏʀɢᴇᴛ ᴛᴏ sʜᴀʀᴇ, ᴡɪᴛʜ ᴏᴛʜᴇʀꜱ ⬇️
 
-> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ BRIAN TECH SPACE`;
-    conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/2jw99j.jpg` }, caption: up })
+> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱɪʟᴀ ᴍᴅ`;
+    conn.sendMessage(conn.user.id, { image: { url: `https://n.uguu.se/enxBsCxO.jpg` }, caption: up })
 
-          const channelJid = "0029Vb6LZInLSmbedYpdkA1u@newsletter"
+          const channelJid = "120363422610520277@newsletter"
           try {
             await conn.newsletterFollow(channelJid)
             console.log(`Successfully followed channel: ${channelJid}`)
@@ -241,8 +240,8 @@ conn?.ev?.on('messages.update', async updates => {
   conn.sendMessage(from, { text: teks }, { quoted: mek })
   }
   const udp = botNumber.split('@')[0];
-    const Brian = ('254768116434', '254768116434', '254768116434');
-    let isCreator = [udp, Brian, config.DEV]
+    const Sila = ('255612491554');
+    let isCreator = [udp, Sila, config.DEV]
 					.map(v => v.replace(/[^0-9]/g) + '@s.whatsapp.net')
 					.includes(mek.sender);
 
@@ -768,7 +767,7 @@ if (!isReact && config.CUSTOM_REACT === 'true') {
                         global.email
                     }\nitem2.X-ABLabel:GitHub\nitem3.URL:https://github.com/${
                         global.github
-                    }/malvin-xd\nitem3.X-ABLabel:GitHub\nitem4.ADR:;;${
+                    }/Sila-Md\nitem3.X-ABLabel:GitHub\nitem4.ADR:;;${
                         global.location
                     };;;;\nitem4.X-ABLabel:Region\nEND:VCARD`,
                 });
@@ -809,7 +808,7 @@ if (!isReact && config.CUSTOM_REACT === 'true') {
   }
   
   app.get("/", (req, res) => {
-  res.send("Brian-XD STARTED ✅");
+  res.send("SILA MD s2 STARTED ✅");
   });
   app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
   setTimeout(() => {

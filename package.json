@@ -1,14 +1,14 @@
 
 
 {
-  "name": "Brian-XD",
+  "name": "Sila-Md",
   "version": "0.0.5",
   "description": "A WhatsApp Bot Created By Brian",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name Brian",
-    "stop": "pm2 stop Brian",
-    "restart": "pm2 restart Brian"
+    "start": "pm2 start index.js --deep-monitoring --attach --name Sila-Md",
+    "stop": "pm2 stop Sila-Md",
+    "restart": "pm2 restart Sila-Md"
   },
   "dependencies": {
        "@whiskeysockets/baileys": "npm:baileys-pro@latest",
