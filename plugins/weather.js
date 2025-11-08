@@ -16,7 +16,7 @@ async (conn, mek, m, { from, q, reply, sender }) => {
         // ✅ Create fake verified contact
         const vcard = `BEGIN:VCARD
 VERSION:3.0
-FN:BRIAN-XD Official ✅
+FN:SILA-MD ✅
 TEL;waid=${sender.split('@')[0]}:${sender.split('@')[0]}
 END:VCARD`;
 
@@ -55,8 +55,8 @@ END:VCARD`;
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363401765045963@newsletter',
-                    newsletterName: "TREND-X TECH",
+                    newsletterJid: '120363422610520277@newsletter',
+                    newsletterName: "𝐒𝐈𝐋𝐀 𝐓𝐄𝐂𝐇",
                     serverMessageId: 100
                 }
             }

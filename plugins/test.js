@@ -12,9 +12,7 @@ cmd({
 async (conn, mek, m, { from, quoted, sender, reply }) => {
     try {
         const songUrls = [
-            "https://files.catbox.moe/nh3jx1.m4a",
-            "https://files.catbox.moe/nh3jx1.m4a",
-            "https://files.catbox.moe/nh3jx1.m4a"
+            "https://files.catbox.moe/m3i466.mp3"
             // Add more direct URLs here
         ];
 
@@ -31,8 +29,8 @@ async (conn, mek, m, { from, quoted, sender, reply }) => {
             },
             message: {
                 contactMessage: {
-                    displayName: "BRIAN-XD VERIFIED ✅",
-                    vcard: "BEGIN:VCARD\nVERSION:3.0\nFN:BRIAN-XD\nORG:BRIAN;\nTEL;type=CELL;type=VOICE;waid=254700000000:+254700000000\nEND:VCARD"
+                    displayName: "SILA-MD VERIFIED ✅",
+                    vcard: "BEGIN:VCARD\nVERSION:3.0\nFN:SILA-MD\nORG:BRIAN;\nTEL;type=CELL;type=VOICE;waid=255700000000:+255700000000\nEND:VCARD"
                 }
             }
         };
@@ -46,14 +44,14 @@ async (conn, mek, m, { from, quoted, sender, reply }) => {
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363401765045963@newsletter',
-                    newsletterName: "TREND-X TECH 👻",
+                    newsletterJid: '120363422610520277@newsletter',
+                    newsletterName: "𝐒𝐈𝐋𝐀 𝐓𝐄𝐂𝐇",
                     serverMessageId: 143
                 },
                 externalAdReply: {
-                    title: "BRIAN-XD",
+                    title: "ꜱɪʟᴀ-ᴍᴅ",
                     body: "Multi-Device WhatsApp Bot",
-                    thumbnailUrl: "https://files.catbox.moe/unxub3.png",
+                    thumbnailUrl: "https://n.uguu.se/enxBsCxO.jpg",
                     mediaType: 1,
                     renderLargerThumbnail: true,
                     showAdAttribution: true

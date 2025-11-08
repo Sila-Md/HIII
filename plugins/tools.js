@@ -168,7 +168,7 @@ cmd({
       return reply("❌ Failed to fetch a fun fact. Please try again.");
     }
 
-    const factMessage = `🧠 *Random Fun Fact* 🧠\n\n${fact}\n\nIsn't that interesting? 😄\n\n> *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ BRIAN-XD*`;
+    const factMessage = `🧠 *Random Fun Fact* 🧠\n\n${fact}\n\nIsn't that interesting? 😄\n\n> *© 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝚂𝙸𝙻𝙰 𝙼𝙳*`;
 
     return reply(factMessage);
   } catch (error) {
@@ -200,7 +200,7 @@ async (conn, mek, m, { from, reply }) => {
         console.log('JSON response:', json);
 
         // Format the pickup line message
-        const pickupLine = `*Here's a pickup line for you:*\n\n"${json.pickupline}"\n\n> *© ᴅʀᴏᴘᴘᴇᴅ ʙʏ BRIAN-XD*`;
+        const pickupLine = `*Here's a pickup line for you:*\n\n"${json.pickupline}"\n\n> *© 𝙿𝙾𝚆𝙴𝚁𝙳 𝙱𝚈 𝚂𝙸𝙻𝙰 𝙼𝙳*`;
 
         // Send the pickup line to the chat
         await conn.sendMessage(from, { text: pickupLine }, { quoted: m });
@@ -260,7 +260,7 @@ async (conn, mek, m, { from, isGroup, text, reply }) => {
             userChar[Math.floor(Math.random() * userChar.length)];
 
         // Message to send
-        const message = `Character of @${mentionedUser.split("@")[0]} is *${userCharacterSelection}* 🔥⚡`;
+        const message = `Character of @${mentionedUser.split("@")[0]} is *${userCharacterSelection}* 🔥☠`;
 
         // Send the message with mentions
         await conn.sendMessage(from, {

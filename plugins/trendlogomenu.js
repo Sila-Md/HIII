@@ -7,7 +7,7 @@ cmd({
     alias: ["logomenu"],
     desc: "menu the bot",
     category: "menu",
-    react: "🎀",
+    react: "🤘",
     filename: __filename
 }, 
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -49,15 +49,15 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/unxub3.png` },
+                image: { url: `https://n.uguu.se/enxBsCxO.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363401765045963@newsletter',
-                        newsletterName: "TREND-X   𝐋𝐎𝐆𝐎 𝐌𝐄𝐍𝐔🧸₊",
+                        newsletterJid: '120363422610520277@newsletter',
+                        newsletterName: "𝐒𝐈𝐋𝐀 𝐓𝐄𝐂𝐇₊",
                         serverMessageId: 143
                     }
                 }

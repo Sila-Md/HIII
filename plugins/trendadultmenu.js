@@ -7,7 +7,7 @@ cmd({
     alias: ["adultmenu"],
     desc: "menu the bot",
     category: "menu",
-    react: "🎀",
+    react: "🔞",
     filename: __filename
 }, 
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -23,15 +23,15 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/unxub3.png` },
+                image: { url: `https://n.uguu.se/enxBsCxO.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363401765045963@newsletter',
-                        newsletterName: "TREND-𝐗  𝐀𝐃𝐔𝐋𝐓 𝐌𝐄𝐍𝐔🔞🔞₊",
+                        newsletterJid: '120363422610520277@newsletter',
+                        newsletterName: "𝐒𝐈𝐋𝐀 𝐓𝐄𝐂𝐇  𝐀𝐃𝐔𝐋𝐓 𝐌𝐄𝐍𝐔🔞🔞₊",
                         serverMessageId: 143
                     }
                 }
