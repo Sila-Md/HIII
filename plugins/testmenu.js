@@ -56,7 +56,7 @@ cmd({
                 return await conn.sendMessage(
                     from,
                     {
-                        image: { url: config.MENU_IMAGE_URL || 'https://n.uguu.se/enxBsCxO.jpg' },
+                        image: { url: config.MENU_IMAGE_URL || 'https://files.catbox.moe/4gca2n.png' },
                         caption: menuCaption,
                         contextInfo: contextInfo
                     },
