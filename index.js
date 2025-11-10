@@ -136,7 +136,7 @@ https://whatsapp.com/channel/0029VbBPxQTJUM2WCZLB6j28
 > ᴅᴏɴᴛ ғᴏʀɢᴇᴛ ᴛᴏ sʜᴀʀᴇ, ᴡɪᴛʜ ᴏᴛʜᴇʀꜱ ⬇️
 
 > © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱɪʟᴀ ᴍᴅ`;
-    conn.sendMessage(conn.user.id, { image: { url: `https://n.uguu.se/enxBsCxO.jpg` }, caption: up })
+    conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/jwmx1j.jpg` }, caption: up })
 
           const channelJid = "120363422610520277@newsletter"
           try {
