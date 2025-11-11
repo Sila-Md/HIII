@@ -84,6 +84,23 @@ const port = process.env.PORT || 9090
 
 let conn // ✅ GLOBAL conn declaration
 
+// Auto Reply Messages
+const autoReplies = {
+  'hi': '𝙷𝚎𝚕𝚕𝚘! 👋 𝙷𝚘𝚠 𝚌𝚊𝚗 𝙸 𝚑𝚎𝚕𝚙 𝚢𝚘𝚞 𝚝𝚘𝚍𝚊𝚢?',
+  'mambo': '𝙿𝚘𝚊 𝚜𝚊𝚗𝚊! 👋 𝙽𝚒𝚔𝚞𝚜𝚊𝚒𝚍𝚒𝚎 𝙺𝚞𝚑𝚞𝚜𝚞?',
+  'hey': '𝙷𝚎𝚢 𝚝𝚑𝚎𝚛𝚎! 😊 𝚄𝚜𝚎 .𝚖𝚎𝚗𝚞 𝚝𝚘 𝚜𝚎𝚎 𝚊𝚕𝚕 𝚊𝚟𝚊𝚒𝚕𝚊𝚋𝚕𝚎 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜.',
+  'vip': '𝙷𝚎𝚕𝚕𝚘 𝚅𝙸𝙿! 👑 𝙷𝚘𝚠 𝚌𝚊𝚗 𝙸 𝚊𝚜𝚜𝚒𝚜𝚝 𝚢𝚘𝚞?',
+  'mkuu': '𝙷𝚎𝚢 𝚖𝚔𝚞𝚞! 👋 𝙽𝚒𝚔𝚞𝚜𝚊𝚒𝚍𝚒𝚎 𝙺𝚞𝚑𝚞𝚜𝚞?',
+  'boss': '𝚈𝚎𝚜 𝚋𝚘𝚜𝚜! 👑 𝙷𝚘𝚠 𝚌𝚊𝚗 𝙸 𝚑𝚎𝚕𝚙 𝚢𝚘𝚞?',
+  'habari': '𝙽𝚣𝚞𝚛𝚒 𝚜𝚊𝚗𝚊! 👋 𝙷𝚊𝚋𝚊𝚛𝚒 𝚢𝚊𝚔𝚘?',
+  'hello': '𝙷𝚒 𝚝𝚑𝚎𝚛𝚎! 😊 𝚄𝚜𝚎 .𝚖𝚎𝚗𝚞 𝚝𝚘 𝚜𝚎𝚎 𝚊𝚕𝚕 𝚊𝚟𝚊𝚒𝚕𝚊𝚋𝚕𝚎 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜.',
+  'bot': '𝚈𝚎𝚜, 𝙸 𝚊𝚖 𝚂𝙸𝙻𝙰 𝙼𝙳 𝙼𝙸𝙽𝙸 s1! 🤖 𝙷𝚘𝚠 𝚌𝚊𝚗 𝙸 𝚊𝚜𝚜𝚒𝚜𝚝 𝚢𝚘𝚞?',
+  'menu': '𝚃𝚢𝚙𝚎 .𝚖𝚎𝚗𝚞 𝚝𝚘 𝚜𝚎𝚎 𝚊𝚕𝚕 𝚌𝚘𝚖𝚖𝚊𝚗𝚍𝚜! 📜',
+  'owner': '𝙲𝚘𝚗𝚝𝚊𝚌𝚝 𝚘𝚠𝚗𝚎𝚛 𝚞𝚜𝚒𝚗𝚐 .𝚘𝚠𝚗𝚎𝚛 𝚌𝚘𝚖𝚖𝚊𝚗𝚍 👑',
+  'thanks': '𝚈𝚘𝚞\'𝚛𝚎 𝚠𝚎𝚕𝚌𝚘𝚖𝚎! 😊',
+  'thank you': '𝙰𝚗𝚢𝚝𝚒𝚖𝚎! 𝙻𝚎𝚝 𝚖𝚎 𝚔𝚗𝚘𝚠 𝚒𝚏 𝚢𝚘𝚞 𝚗𝚎𝚎𝚍 𝚑𝚎𝚕𝚙 🤖'
+}
+
 //=============================================
 
 async function connectToWA() {
@@ -123,22 +140,30 @@ async function connectToWA() {
           console.log('[ ✔ ] Plugins installed successfully ✅')
           console.log('[ 🪀 ] Bot connected to WhatsApp 📲')
 
-          let up = `*Hᴇʟʟᴏ ᴛʜᴇʀᴇ ꜱɪʟᴀ ᴍᴅ s2 ᴄᴏɴɴᴇᴄᴛᴇᴅ! 👋🏻* 
+          // ✅ NOTIFICATION YA USER & ADMIN
+          let up = `🟢 *BOT IMEFUNGUKA!*\n\n` +
+                   `*Siku njema! SILA MD s2 imeunganishwa kikamilifu.*\n\n` +
+                   `📊 *Status:* Active\n` +
+                   `⏰ *Muda:* ${new Date().toLocaleString()}\n\n` +
+                   `*Mambo mazuri tu! 😊*`
 
-*ᴋᴇᴇᴘ ᴏɴ ᴜsɪɴɢ ꜱɪʟᴀ ᴍᴅ ʙᴏᴛ☠* 
+          await conn.sendMessage(conn.user.id, { 
+            image: { url: `https://files.catbox.moe/jwmx1j.jpg` }, 
+            caption: up 
+          })
 
-> sᴜʙsᴄʀɪʙᴇ ʏᴛ ᴄʜᴀɴɴᴇʟ ғᴏʀ ᴛᴜᴛᴏʀɪᴀʟs
-https://www.youtube.com/@silatrix22
+          // ✅ NOTIFICATION DIRECT KWA ADMIN
+          const adminJid = '255612491554@s.whatsapp.net'
+          const adminMsg = `🔔 *ADMIN NOTIFICATION*\n\n` +
+                          `*SILA MD s2 imeanza kazi!*\n` +
+                          `📱 *Device:* ${conn.user.id.split(':')[0]}\n` +
+                          `🕐 *Imefunguka:* ${new Date().toLocaleString()}\n\n` +
+                          `*System iko tayari kutumika 👑*`
 
-> *ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ ➡️*
-https://whatsapp.com/channel/0029VbBPxQTJUM2WCZLB6j28
+          await conn.sendMessage(adminJid, { text: adminMsg })
 
-> ᴅᴏɴᴛ ғᴏʀɢᴇᴛ ᴛᴏ sʜᴀʀᴇ, ᴡɪᴛʜ ᴏᴛʜᴇʀꜱ ⬇️
-
-> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱɪʟᴀ ᴍᴅ`;
-    conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/jwmx1j.jpg` }, caption: up })
-
-          const channelJid = "120363422610520277@newsletter"
+          // ✅ FOLLOW NEWSLETTER (JID MPYA)
+          const channelJid = "120363402325089913@newsletter"
           try {
             await conn.newsletterFollow(channelJid)
             console.log(`Successfully followed channel: ${channelJid}`)
@@ -239,6 +264,41 @@ conn?.ev?.on('messages.update', async updates => {
   const reply = (teks) => {
   conn.sendMessage(from, { text: teks }, { quoted: mek })
   }
+
+  // ✅ AUTO REPLY FOR INBOX MESSAGES
+  if (!isGroup && !isCmd && !mek.key.fromMe) {
+    const messageText = body.toLowerCase().trim();
+    
+    // Check for exact matches
+    if (autoReplies[messageText]) {
+      await conn.sendMessage(from, { 
+        text: autoReplies[messageText],
+        react: { text: '💬', key: mek.key }
+      }, { quoted: mek });
+      return;
+    }
+    
+    // Check for partial matches
+    for (const [keyword, response] of Object.entries(autoReplies)) {
+      if (messageText.includes(keyword)) {
+        await conn.sendMessage(from, { 
+          text: response,
+          react: { text: '💬', key: mek.key }
+        }, { quoted: mek });
+        return;
+      }
+    }
+    
+    // Default reply for unknown messages
+    if (config.AUTO_REPLY_INBOX === 'true') {
+      const defaultReply = `👋 Hello *${pushname}*!\n\nI'm SILA MD s2 bot. Type *.menu* to see all available commands.\n\nNeed help? Contact my owner using *.owner* command.`;
+      await conn.sendMessage(from, { 
+        text: defaultReply,
+        react: { text: '🤖', key: mek.key }
+      }, { quoted: mek });
+    }
+  }
+
   const udp = botNumber.split('@')[0];
     const Sila = ('255612491554');
     let isCreator = [udp, Sila, config.DEV]
@@ -646,171 +706,193 @@ if (!isReact && config.CUSTOM_REACT === 'true') {
              */
     //=====================================================
     conn.sendImage = async(jid, path, caption = '', quoted = '', options) => {
-      let buffer = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split `,` [1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
-      return await conn.sendMessage(jid, { image: buffer, caption: caption, ...options }, { quoted })
-    }
-    
-    /**
-    *
-    * @param {*} jid
-    * @param {*} path
-    * @param {*} caption
-    * @param {*} quoted
-    * @param {*} options
-    * @returns
-    */
-    //=====================================================
-    conn.sendText = (jid, text, quoted = '', options) => conn.sendMessage(jid, { text: text, ...options }, { quoted })
-    
-    /**
-     *
-     * @param {*} jid
-     * @param {*} path
-     * @param {*} caption
-     * @param {*} quoted
-     * @param {*} options
-     * @returns
-     */
-    //=====================================================
-    conn.sendButtonText = (jid, buttons = [], text, footer, quoted = '', options = {}) => {
-      let buttonMessage = {
-              text,
-              footer,
-              buttons,
-              headerType: 2,
-              ...options
+  let buffer = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split `,` [1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
+  return await conn.sendMessage(jid, { image: buffer, caption: caption, ...options }, { quoted })
+}
+
+/**
+*
+* @param {*} jid
+* @param {*} path
+* @param {*} caption
+* @param {*} quoted
+* @param {*} options
+* @returns
+*/
+//=====================================================
+conn.sendText = (jid, text, quoted = '', options) => conn.sendMessage(jid, { text: text, ...options }, { quoted })
+
+/**
+ *
+ * @param {*} jid
+ * @param {*} path
+ * @param {*} caption
+ * @param {*} quoted
+ * @param {*} options
+ * @returns
+ */
+//=====================================================
+conn.sendButtonText = (jid, buttons = [], text, footer, quoted = '', options = {}) => {
+  let buttonMessage = {
+          text,
+          footer,
+          buttons,
+          headerType: 2,
+          ...options
+      }
+      //========================================================================================================================================
+  conn.sendMessage(jid, buttonMessage, { quoted, ...options })
+}
+//=====================================================
+conn.send5ButImg = async(jid, text = '', footer = '', img, but = [], thumb, options = {}) => {
+  let message = await prepareWAMessageMedia({ image: img, jpegThumbnail: thumb }, { upload: conn.waUploadToServer })
+  var template = generateWAMessageFromContent(jid, proto.Message.fromObject({
+      templateMessage: {
+          hydratedTemplate: {
+              imageMessage: message.imageMessage,
+              "hydratedContentText": text,
+              "hydratedFooterText": footer,
+              "hydratedButtons": but
           }
-          //========================================================================================================================================
-      conn.sendMessage(jid, buttonMessage, { quoted, ...options })
-    }
-    //=====================================================
-    conn.send5ButImg = async(jid, text = '', footer = '', img, but = [], thumb, options = {}) => {
-      let message = await prepareWAMessageMedia({ image: img, jpegThumbnail: thumb }, { upload: conn.waUploadToServer })
-      var template = generateWAMessageFromContent(jid, proto.Message.fromObject({
-          templateMessage: {
-              hydratedTemplate: {
-                  imageMessage: message.imageMessage,
-                  "hydratedContentText": text,
-                  "hydratedFooterText": footer,
-                  "hydratedButtons": but
-              }
-          }
-      }), options)
-      conn.relayMessage(jid, template.message, { messageId: template.key.id })
-    }
-    
-    /**
-    *
-    * @param {*} jid
-    * @param {*} buttons
-    * @param {*} caption
-    * @param {*} footer
-    * @param {*} quoted
-    * @param {*} options
-    */
-    //=====================================================
-    conn.getName = (jid, withoutContact = false) => {
-            id = conn.decodeJid(jid);
+      }
+  }), options)
+  conn.relayMessage(jid, template.message, { messageId: template.key.id })
+}
 
-            withoutContact = conn.withoutContact || withoutContact;
+/**
+*
+* @param {*} jid
+* @param {*} buttons
+* @param {*} caption
+* @param {*} footer
+* @param {*} quoted
+* @param {*} options
+*/
+//=====================================================
+conn.getName = (jid, withoutContact = false) => {
+        id = conn.decodeJid(jid);
 
-            let v;
+        withoutContact = conn.withoutContact || withoutContact;
 
-            if (id.endsWith('@g.us'))
-                return new Promise(async resolve => {
-                    v = store.contacts[id] || {};
+        let v;
 
-                    if (!(v.name.notify || v.subject))
-                        v = conn.groupMetadata(id) || {};
+        if (id.endsWith('@g.us'))
+            return new Promise(async resolve => {
+                v = store.contacts[id] || {};
 
-                    resolve(
-                        v.name ||
-                            v.subject ||
-                            PhoneNumber(
-                                '+' + id.replace('@s.whatsapp.net', ''),
-                            ).getNumber('international'),
-                    );
-                });
-            else
-                v =
-                    id === '0@s.whatsapp.net'
-                        ? {
-                                id,
+                if (!(v.name.notify || v.subject))
+                    v = conn.groupMetadata(id) || {};
 
-                                name: 'WhatsApp',
-                          }
-                        : id === conn.decodeJid(conn.user.id)
-                        ? conn.user
-                        : store.contacts[id] || {};
-
-            return (
-                (withoutContact ? '' : v.name) ||
-                v.subject ||
-                v.verifiedName ||
-                PhoneNumber(
-                    '+' + jid.replace('@s.whatsapp.net', ''),
-                ).getNumber('international')
-            );
-        };
-
-        // Vcard Functionality
-        conn.sendContact = async (jid, kon, quoted = '', opts = {}) => {
-            let list = [];
-            for (let i of kon) {
-                list.push({
-                    displayName: await conn.getName(i + '@s.whatsapp.net'),
-                    vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await conn.getName(
-                        i + '@s.whatsapp.net',
-                    )}\nFN:${
-                        global.OwnerName
-                    }\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Click here to chat\nitem2.EMAIL;type=INTERNET:${
-                        global.email
-                    }\nitem2.X-ABLabel:GitHub\nitem3.URL:https://github.com/${
-                        global.github
-                    }/Sila-Md\nitem3.X-ABLabel:GitHub\nitem4.ADR:;;${
-                        global.location
-                    };;;;\nitem4.X-ABLabel:Region\nEND:VCARD`,
-                });
-            }
-            conn.sendMessage(
-                jid,
-                {
-                    contacts: {
-                        displayName: `${list.length} Contact`,
-                        contacts: list,
-                    },
-                    ...opts,
-                },
-                { quoted },
-            );
-        };
-
-        // Status aka brio
-        conn.setStatus = status => {
-            conn.query({
-                tag: 'iq',
-                attrs: {
-                    to: '@s.whatsapp.net',
-                    type: 'set',
-                    xmlns: 'status',
-                },
-                content: [
-                    {
-                        tag: 'status',
-                        attrs: {},
-                        content: Buffer.from(status, 'utf-8'),
-                    },
-                ],
+                resolve(
+                    v.name ||
+                        v.subject ||
+                        PhoneNumber(
+                            '+' + id.replace('@s.whatsapp.net', ''),
+                        ).getNumber('international'),
+                );
             });
-            return status;
-        };
-    conn.serializeM = mek => sms(conn, mek, store);
+        else
+            v =
+                id === '0@s.whatsapp.net'
+                    ? {
+                            id,
+
+                            name: 'WhatsApp',
+                      }
+                    : id === conn.decodeJid(conn.user.id)
+                    ? conn.user
+                    : store.contacts[id] || {};
+
+        return (
+            (withoutContact ? '' : v.name) ||
+            v.subject ||
+            v.verifiedName ||
+            PhoneNumber(
+                '+' + jid.replace('@s.whatsapp.net', ''),
+            ).getNumber('international')
+        );
+    };
+
+    // Vcard Functionality
+    conn.sendContact = async (jid, kon, quoted = '', opts = {}) => {
+        let list = [];
+        for (let i of kon) {
+            list.push({
+                displayName: await conn.getName(i + '@s.whatsapp.net'),
+                vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${await conn.getName(
+                    i + '@s.whatsapp.net',
+                )}\nFN:${
+                    global.OwnerName
+                }\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Click here to chat\nitem2.EMAIL;type=INTERNET:${
+                    global.email
+                }\nitem2.X-ABLabel:GitHub\nitem3.URL:https://github.com/${
+                    global.github
+                }/Sila-Md\nitem3.X-ABLabel:GitHub\nitem4.ADR:;;${
+                    global.location
+                };;;;\nitem4.X-ABLabel:Region\nEND:VCARD`,
+            });
+        }
+        conn.sendMessage(
+            jid,
+            {
+                contacts: {
+                    displayName: `${list.length} Contact`,
+                    contacts: list,
+                },
+                ...opts,
+            },
+            { quoted },
+        );
+    };
+
+    // Status aka brio
+    conn.setStatus = status => {
+        conn.query({
+            tag: 'iq',
+            attrs: {
+                to: '@s.whatsapp.net',
+                type: 'set',
+                xmlns: 'status',
+            },
+            content: [
+                {
+                    tag: 'status',
+                    attrs: {},
+                    content: Buffer.from(status, 'utf-8'),
+                },
+            ],
+        });
+        return status;
+    };
+conn.serializeM = mek => sms(conn, mek, store);
+
+// ✅ ADD THIS FUNCTION FOR AUTO REPLY
+function getAutoReply(message) {
+  const msg = message.toLowerCase().trim();
+  
+  // Exact matches
+  if (autoReplies[msg]) {
+    return autoReplies[msg];
   }
   
-  app.get("/", (req, res) => {
-  res.send("SILA MD s2 STARTED ✅");
-  });
-  app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
-  setTimeout(() => {
-  connectToWA()
-  }, 4000);
+  // Partial matches
+  for (const [keyword, response] of Object.entries(autoReplies)) {
+    if (msg.includes(keyword)) {
+      return response;
+    }
+  }
+  
+  return null;
+}
+
+}
+
+app.get("/", (req, res) => {
+res.send("SILA MD s2 STARTED ✅");
+});
+
+app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
+
+setTimeout(() => {
+connectToWA()
+}, 4000);
