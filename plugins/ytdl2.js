@@ -10,7 +10,7 @@ cmd({
     react: "🎥", 
     desc: "Download Youtube song", 
     category: "main", 
-    use: '.song < Yt url or Name >', 
+    use: '.song2 < Yt url or Name >', 
     filename: __filename 
 }, async (conn, mek, m, { from, prefix, quoted, q, reply }) => { 
     try { 
@@ -67,11 +67,11 @@ cmd({
 
 cmd({ 
      pattern: "mp3", 
-     alias: ["yta", "play"], 
+     alias: ["yta", "play2"], 
      react: "🎶", 
      desc: "Download Youtube song",
      category: "main", 
-     use: '.song < Yt url or Name >', 
+     use: '.song2 < Yt url or Name >', 
      filename: __filename }, 
      async (conn, mek, m, { from, prefix, quoted, q, reply }) => 
      
