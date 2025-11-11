@@ -81,7 +81,7 @@ const yt = await ytsearch(q);
     if (yt.results.length < 1) return reply("No results found!");
     
     let yts = yt.results[0];  
-    let apiUrl = `https://sadiya-tech-apis.vercel.app/download/ytdl?url=${encodeURIComponent(ytUrl)}&format=mp3&apikey=sadiya`;
+    let apiUrl = `https://api.nekolabs.my.id/downloader/youtube/play/v1?q=${encodeURIComponent(text)}`;
     let response = await fetch(apiUrl);
     let data = await response.json();
     
