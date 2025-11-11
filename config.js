@@ -18,6 +18,7 @@ AUTO_STATUS_REACT: process.env.AUTO_STATUS_REACT || "true",
 AUTO_STATUS_MSG: process.env.AUTO_STATUS_MSG || "*☠𝐒𝐄𝐄𝐍 𝐘𝐎𝐔𝐑 𝐒𝐓𝐀𝐓𝐔𝐒 𝐁𝐘 𝐒𝐈𝐋𝐀 𝐌𝐃*",
 // set the auto reply massage on status reply  
 ANTI_DELETE: process.env.ANTI_DELETE || "true",
+AUTO_REPLY_INBOX: 'true', // Enable/disable auto replies for inbox   
 // set true false for anti delete     
 ANTI_DEL_PATH: process.env.ANTI_DEL_PATH || "inbox", 
 // change it to 'same' if you want to resend deleted message in same chat     
@@ -80,5 +81,5 @@ DEV: process.env.DEV || "255612491554",
 ANTI_VV: process.env.ANTI_VV || "true",
 // true for anti once view 
 AUTO_RECORDING: process.env.AUTO_RECORDING || "true"
-// make it true for auto recoding 
+// make it true for auto recoding  
 };
