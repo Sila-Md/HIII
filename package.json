@@ -43,6 +43,7 @@
     "wa-sticker-formatter": "^4.4.4",
     "path": "^0.12.7",
     "vm": "^0.1.0",
+    "mumaker": "^2.0.0",
     "adm-zip": "^0.5.16",
     "cheerio": "^1.0.0-rc.12",
     "ruhend-scraper" : "8.0.3",
