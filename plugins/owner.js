@@ -11,10 +11,10 @@ cmd({
         const ownerInfo = `
 👑 *SILA-MD OWNER* 👑
 
-🤖 *Bot Name:* Sila-Md
-👨‍💻 *Developer:* Brian
-📞 *Contact:* +255612491554
-📧 *Email:* brian@email.com
+🤖 *Bot Name:* *Sila-Md*
+👨‍💻 *Developer:* *Sir Sila*
+📞 *Contact:* *+255612491554*
+📧 *Email:* *silatrix22@email.com*
 
 💬 *For any issues or inquiries, feel free to contact the owner!*
 
@@ -27,7 +27,7 @@ cmd({
         // You can also send owner's contact card if needed
         // const vcard = 'BEGIN:VCARD\n' +
         //     'VERSION:3.0\n' +
-        //     'FN:Brian\n' +
+        //     'FN:Sila\n' +
         //     'ORG:Sila-Md Developer;\n' +
         //     'TEL;type=CELL;type=VOICE;waid=255612491554:+255612491554\n' +
         //     'END:VCARD';
