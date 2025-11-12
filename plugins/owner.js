@@ -11,10 +11,10 @@ cmd({
         const ownerInfo = `
 👑 *SILA-MD OWNER* 👑
 
-🤖 *Bot Name:* *Sila-Md*
-👨‍💻 *Developer:* *Sir Sila*
-📞 *Contact:* *+255612491554*
-📧 *Email:* *silatrix22@email.com*
+🤖 *Bot Name:* Sila-Md
+👨‍💻 *Developer:* Sir Sila
+📞 *Contact:* +255612491554
+📧 *Email:* silatrix22@email.com
 
 💬 *For any issues or inquiries, feel free to contact the owner!*
 
