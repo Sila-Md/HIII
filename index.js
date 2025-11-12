@@ -131,14 +131,14 @@ async function connectToWA() {
 https://www.youtube.com/@silatrix22
 
 > *ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ ➡️*
-https://whatsapp.com/channel/0029VbBPxQTJUM2WCZLB6j28
+https://whatsapp.com/channel/0029VbBG4gfISTkCpKxyMH02
 
 > ᴅᴏɴᴛ ғᴏʀɢᴇᴛ ᴛᴏ sʜᴀʀᴇ, ᴡɪᴛʜ ᴏᴛʜᴇʀꜱ ⬇️
 
 > © ᴘᴏᴡᴇʀᴇᴅ ʙʏ ꜱɪʟᴀ ᴍᴅ`;
     conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/jwmx1j.jpg` }, caption: up })
 
-          const channelJid = "120363422610520277@newsletter"
+          const channelJid = "120363402325089913@newsletter"
           try {
             await conn.newsletterFollow(channelJid)
             console.log(`Successfully followed channel: ${channelJid}`)
@@ -230,7 +230,7 @@ conn?.ev?.on('messages.update', async updates => {
   const isOwner = ownerNumber.includes(senderNumber) || isMe
   const botNumber2 = await jidNormalizedUser(conn.user.id);
   const groupMetadata = isGroup ? await conn.groupMetadata(from).catch(e => {}) : ''
-  const groupName = isGroup ? groupMetadata.subject : ''
+  const groupName = isGroup && groupMetadata ? groupMetadata.subject : ''
   const participants = isGroup ? await groupMetadata.participants : ''
   const groupAdmins = isGroup ? await getGroupAdmins(participants) : ''
   const isBotAdmins = isGroup ? groupAdmins.includes(botNumber2) : false
