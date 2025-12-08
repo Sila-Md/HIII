@@ -68,7 +68,7 @@ const {
 //===================SESSION-AUTH============================
 if (!fs.existsSync(__dirname + '/sessions/creds.json')) {
     if (config.SESSION_ID && config.SESSION_ID.trim() !== "") {
-        const sessdata = config.SESSION_ID.replace("IK~", '');
+        const sessdata = config.SESSION_ID.replace("", '');
         try {
             // Decode base64 string
             const decodedData = Buffer.from(sessdata, 'base64').toString('utf-8');
